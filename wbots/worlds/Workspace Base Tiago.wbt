@@ -6,8 +6,6 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/project
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/VarnishedPine.proto"
 EXTERNPROTO "../protos/Cookware.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/niryo/ned/protos/Ned.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/Floor.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/Parquetry.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/pal_robotics/tiago/protos/Tiago.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/pal_robotics/tiago_extensions/protos/TiagoRightHey5.proto"
 
@@ -24,8 +22,8 @@ WorldInfo {
   ]
 }
 Viewpoint {
-  orientation -0.15537431175144775 0.015162789061652183 0.9877392940830266 2.9494200901988794
-  position 2.5605820581503105 -1.0501545550957585 2.068482135441452
+  orientation -0.30249571094719097 0.060854915682831044 0.9512060891814083 2.763453617325692
+  position 4.03702771767413 -2.1304614000292643 3.3483630049692064
 }
 TexturedBackground {
 }
@@ -39,14 +37,6 @@ RectangleArena {
 Solid {
   translation 0.0631602 1.83561 0.38
   children [
-    Floor {
-      translation 0 0 0.36
-      contactMaterial "workbench_surface"
-      size 2 1.3
-      appearance Parquetry {
-        type "light strip"
-      }
-    }
     Shape {
       appearance VarnishedPine {
       }
@@ -69,10 +59,8 @@ Ned {
   controller "ned_flip_burger"
 }
 Tiago {
-  hidden translation_10 0.05505452726440651 -2.4890615076095463e-07 4.1867369837628735e-06
-  hidden rotation_10 0.5773500567093874 0.5773499515597001 0.5773507992994198 2.094399047105429
-  translation -0.355954 -0.587284 0.935
-  controller "tiago_hey5_hand"
+  translation -0.355954 -0.587284 0.145
+  controller "tiago_stirring"
   endEffectorSlot TiagoRightHey5 {
   }
 }

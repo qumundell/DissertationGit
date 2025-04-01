@@ -6,5 +6,7 @@ maximizedDockId: -1
 centralWidgetVisible: 1
 renderingMode: PLAIN
 orthographicViewHeight: 1
-textFiles: 1 "worlds/Workspace Base.wbt" "controllers/ned_flip_burger/ned_flip_burger.py" "../../../../../../../Program Files/Webots/projects/robots/niryo/ned/controllers/ned_python/ned_python.py"
+textFiles: 5 "worlds/Workspace Base.wbt" "controllers/ned_flip_burger/ned_flip_burger.py" "../../../../../../../Program Files/Webots/projects/robots/niryo/ned/controllers/ned_python/ned_python.py" "controllers/tiago_stirring/tiago_stirring.py" "../../../../../../../Program Files/Webots/projects/robots/pal_robotics/tiago/controllers/tiago_hey5_hand/tiago_hey5_hand.c" "controllers/four_wheel_collision_avoidance/four_wheel_collision_avoidance.py"
 consoles: Console:All:All
+renderingDevicePerspectives: TIAGo:Astra depth;1;0.895833;0;0
+renderingDevicePerspectives: TIAGo:Astra rgb;1;0.895833;0;0

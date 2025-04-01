@@ -27,21 +27,22 @@ m6 = robot.getDevice('joint_6')
 m7 = robot.getDevice('gripper::left')
 
 # Initial movements/actions:
-m1.setPosition(0)
-m2.setPosition(0)
-m3.setPosition(0)
-m4.setPosition(0)
-m5.setPosition(0)
-m6.setPosition(0)
-m7.setPosition(0)
-
-m1.setVelocity(1)
-m2.setVelocity(1)
-m3.setVelocity(1)
-m4.setVelocity(1)
-m5.setVelocity(1)
-m6.setVelocity(1)
-m7.setVelocity(1)
+def reset():
+    m1.setPosition(0)
+    m2.setPosition(0)
+    m3.setPosition(0)
+    m4.setPosition(0)
+    m5.setPosition(0)
+    m6.setPosition(0)
+    m7.setPosition(0)
+    
+    m1.setVelocity(1)
+    m2.setVelocity(1)
+    m3.setVelocity(1)
+    m4.setVelocity(1)
+    m5.setVelocity(1)
+    m6.setVelocity(1)
+    m7.setVelocity(1)
 
 def flip():
     m7.setPosition(0.01)
@@ -58,7 +59,7 @@ def flip():
     if robot.step(1500) == -1:
         return
         
-    m3.setPosition(0.3)
+    m3.setPosition(0.28)
     
     if robot.step(1000) == -1:
         return
@@ -70,20 +71,21 @@ def flip():
     
     m7.setPosition(0)
     
-    if robot.step(1000) == -1:
+    if robot.step(1500) == -1:
         return
     
-    m2.setPosition(0.4)
-    m6.setPosition(-1.5708)
+    m2.setPosition(0.32)
+    m6.setPosition(-1*1.5708)
     
     if robot.step(1500) == -1:
         return
 
-
+reset()
 while True:
 
     print("------------COMMANDS--------------")
     print("Flip the Burger --> SHIFT+F")
+    print("Reset Ned --> SHIFT+R")
     print("Move joint_1 --> SHIFT+A or SHIFT+Z")
     print("Move joint_2 --> SHIFT+Q or SHIFT+S")
     print("Move joint_3 --> SHIFT+W or SHIFT+X")
@@ -160,6 +162,11 @@ while True:
         elif key == Keyboard.SHIFT + ord('F'):
             print("Flipping burg")
             flip()
+            
+        elif key == Keyboard.SHIFT + ord('R'):
+            print("Flipping burg")
+            reset()
+
 
 
 # Main loop:
