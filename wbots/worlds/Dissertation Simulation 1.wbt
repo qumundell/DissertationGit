@@ -1,0 +1,88 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/tables/protos/Table.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/VarnishedPine.proto"
+EXTERNPROTO "../protos/Cookware.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/kitchen/utensils/protos/Lid.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/niryo/ned/protos/Ned.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/pal_robotics/tiago/protos/Tiago.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/kitchen/utensils/protos/WoodenSpoon.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/solids/protos/SolidPipe.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/GalvanizedMetal.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.017091975405157035 0.999239054462409 -0.03505961228850316 0.9076488634093414
+  position -0.5398769038901016 0.34475848908485796 4.065753211194508
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 6 6
+  floorTileSize 2.5 2.5
+  wallHeight 1
+}
+Table {
+  translation 2.1254 -0.166295 8.88178e-16
+  trayAppearance VarnishedPine {
+    colorOverride 0.560784 0.466667 0.403922
+    textureTransform TextureTransform {
+      scale 10 10
+    }
+  }
+  legAppearance VarnishedPine {
+    colorOverride 0.513726 0.427451 0.368627
+    textureTransform TextureTransform {
+      scale 4 5
+    }
+  }
+}
+Cookware {
+  translation 2.26015 -0.751818 0.75
+  name "pan"
+}
+Lid {
+  translation 2.42922 0.604119 0.77
+}
+Ned {
+  translation 2.02638 -0.156848 0.75
+  controller "ned_python"
+}
+Tiago {
+  translation 0.589712 -1.51355 0.095
+}
+WoodenSpoon {
+  translation 2.28714 0.175044 0.75
+  rotation 0 0 1 0.785398
+}
+SolidPipe {
+  translation 2.00021 0.371411 0.82
+  name "pot"
+  height 0.15
+  radius 0.15
+  thickness 0.02
+  appearance PBRAppearance {
+    baseColor 0.341176 0.345098 0.403922
+    roughness 0.5
+    metalness 0
+  }
+}
+Solid {
+  translation 2.00021 0.371411 0.74
+  children [
+    Shape {
+      appearance GalvanizedMetal {
+      }
+      geometry Cylinder {
+        height 0.001
+        radius 0.15
+      }
+    }
+  ]
+}

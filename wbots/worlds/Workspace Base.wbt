@@ -1,0 +1,97 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/VarnishedPine.proto"
+EXTERNPROTO "../protos/Cookware.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/niryo/ned/protos/Ned.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/Parquetry.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.29248324598184045 0.5647056297831424 0.7717260540574941 1.1822014592605852
+  position -0.8174568256763757 0.9811266269855059 1.729719371403043
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 6 6
+  floorTileSize 2.5 2.5
+  wallHeight 1
+}
+Solid {
+  translation 0.0631602 1.83561 0.38
+  children [
+    Floor {
+      translation 0 0 0.36
+      size 2 1.3
+      appearance Parquetry {
+        type "light strip"
+      }
+    }
+    Shape {
+      appearance VarnishedPine {
+      }
+      geometry DEF WORKBENCH_GEOMETRY Box {
+        size 2 1.3 0.7
+      }
+    }
+  ]
+  name "Workbench"
+  boundingObject USE WORKBENCH_GEOMETRY
+}
+Cookware {
+  translation 0.0647554 1.34071 0.737474
+  rotation 0 0 -1 1.5708
+  name "pan"
+}
+Ned {
+  translation 0.0535797 1.80477 0.65
+  rotation 0 0 1 1.5708
+  controller "ned_flip_burger"
+}
+Solid {
+  translation -0.281818 2.05629 0.76
+  rotation 1 0 0 1.5708
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.666667 0.364706 0.309804
+        metalness 0
+      }
+      geometry DEF SAUSAGE_GEOMETRY Capsule {
+        height 0.06
+        radius 0.013
+      }
+    }
+  ]
+  name "sausage"
+  boundingObject USE SAUSAGE_GEOMETRY
+  physics Physics {
+  }
+}
+Solid {
+  translation -0.345815 1.82439 0.76
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.333333 0.0862745 0.0352941
+        metalness 0
+      }
+      geometry DEF BURGER_GEOMETRY Cylinder {
+        height 0.02
+        radius 0.04
+      }
+      castShadows FALSE
+    }
+  ]
+  name "burger"
+  boundingObject USE BURGER_GEOMETRY
+  physics Physics {
+  }
+}
