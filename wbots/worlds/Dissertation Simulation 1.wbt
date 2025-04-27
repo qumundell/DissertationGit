@@ -16,12 +16,16 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/project
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.017091975405157035 0.999239054462409 -0.03505961228850316 0.9076488634093414
-  position -0.5398769038901016 0.34475848908485796 4.065753211194508
+  orientation 0.29243297442629546 0.1871584140490481 -0.9377924522616049 2.060462578347583
+  position 2.2956954915047434 3.758774382828985 3.414568633115504
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
+}
+Robot {
+  controller "particle_spawner"
+  supervisor TRUE
 }
 RectangleArena {
   floorSize 6 6
@@ -55,13 +59,13 @@ Ned {
   controller "ned_python"
 }
 Tiago {
-  translation 0.589712 -1.51355 0.095
+  translation 1.035 0.0968513 0.095
 }
 WoodenSpoon {
-  translation 2.28714 0.175044 0.75
+  translation 2.31509 0.148533 0.75
   rotation 0 0 1 0.785398
 }
-SolidPipe {
+DEF POT_SOLIDPIPE SolidPipe {
   translation 2.00021 0.371411 0.82
   name "pot"
   height 0.15
@@ -79,10 +83,53 @@ Solid {
     Shape {
       appearance GalvanizedMetal {
       }
-      geometry Cylinder {
+      geometry DEF PAN_BOTTOM Cylinder {
         height 0.001
         radius 0.15
       }
     }
   ]
+  name "Pot Bottom"
+  boundingObject USE PAN_BOTTOM
+}
+Fluid {
+  translation 2.00021 0.371411 0.82
+  boundingObject Cylinder {
+    height 0.135
+    radius 0.13
+  }
+}
+Solid {
+  translation 2.00021 0.371411 0.82
+  children [
+    Shape {
+      appearance PBRAppearance {
+        transparency 0.4
+      }
+      geometry Cylinder {
+        height 0.135
+        radius 0.13
+      }
+    }
+  ]
+  name "Water Appearance"
+}
+Solid {
+  translation 2.00022 0.371411 0.84
+  children [
+    Shape {
+      geometry DEF PARTICLE_GEOMETRY Sphere {
+        radius 0.01
+      }
+    }
+  ]
+  name "Water Particle"
+  immersionProperties [
+    ImmersionProperties {
+      fluidName "fluid"
+    }
+  ]
+  boundingObject USE PARTICLE_GEOMETRY
+  physics Physics {
+  }
 }
