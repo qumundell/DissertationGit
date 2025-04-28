@@ -384,6 +384,7 @@ PROTO Ned [
                                             translation 0 0 0.0215
                                             rotation -0.5775032287046064 -0.5770442285228317 0.5775032287046064 2.093475
                                             children [
+                                              
                                               Shape {
                                                 appearance Plastic {
                                                   colorOverride 0 0 0
@@ -413,6 +414,14 @@ PROTO Ned [
                                                   translation 0.01455 -0.0244 0.009614
                                                   rotation 1 0 0 1.5708
                                                   children [
+                                                    Solid {
+                                                      translation 0.01455 -0.0244 0.009614  
+                                                      children [
+                                                        VacuumGripper {
+                                                          name "gripper_vacuum"
+                                                        }
+                                                      ]
+                                                    }
                                                     Shape {
                                                       appearance USE BLACK_APPEARANCE
                                                       geometry Mesh {

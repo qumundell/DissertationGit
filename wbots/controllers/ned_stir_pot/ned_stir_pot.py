@@ -3,6 +3,7 @@
 # You may need to import some classes of the controller module. Ex:
 #  from controller import Robot, Motor, DistanceSensor
 from controller import Robot
+from controller import VacuumGripper
 
 # create the Robot instance.
 robot = Robot()
@@ -23,6 +24,7 @@ m4 = robot.getDevice('joint_4')
 m5 = robot.getDevice('joint_5')
 m6 = robot.getDevice('joint_6')
 m7 = robot.getDevice('gripper::left')
+vgrip = robot.getDevice('gripper_vacuum')
 
 m1.setPosition(0)
 m2.setPosition(0)
@@ -31,6 +33,7 @@ m4.setPosition(0)
 m5.setPosition(0)
 m6.setPosition(0)
 m7.setPosition(0)
+vgrip.turnOff()
 
 m1.setVelocity(1)
 m2.setVelocity(1)
@@ -57,7 +60,7 @@ def pick_up_stir():
         
     # if possible, switch to vacuumGripper cause this is so much better probably
     m7.setPosition(-0.01)
-    
+    vgrip.turnOn()    
     if robot.step(1500) == -1:
         return
         

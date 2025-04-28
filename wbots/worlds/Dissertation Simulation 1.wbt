@@ -4,7 +4,7 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/project
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
 EXTERNPROTO "../protos/Cookware.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/niryo/ned/protos/Ned.proto"
+EXTERNPROTO "../protos/Ned.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/pal_robotics/tiago/protos/Tiago.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/solids/protos/SolidPipe.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/GalvanizedMetal.proto"
@@ -14,7 +14,7 @@ WorldInfo {
     ContactProperties {
       material1 "wooden_spoon"
       coulombFriction [
-        0.8
+        0.99
       ]
       bounce 0
       softERP 0.9
@@ -651,7 +651,7 @@ Solid {
   }
   physics Physics {
     density -1
-    mass 0.05
+    mass 0.01
     centerOfMass [
       -0.006 0 0.003
     ]
