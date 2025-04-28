@@ -40,8 +40,30 @@ m5.setVelocity(1)
 m6.setVelocity(1)
 m7.setVelocity(1)
 
-
-
+def pick_up_stir():
+    if robot.step(1500) == -1:
+        return
+    m1.setPosition(-0.75)
+    m2.setPosition(0.8)
+    m7.setPosition(0.01)
+    if robot.step(1500) == -1:
+        return
+    
+    m3.setPosition(0.487)
+    
+    
+    if robot.step(1500) == -1:
+        return
+        
+    # if possible, switch to vacuumGripper cause this is so much better probably
+    m7.setPosition(-0.01)
+    
+    if robot.step(1500) == -1:
+        return
+        
+    m2.setPosition(0)
+   
+pick_up_stir()
 # Main loop:
 # - perform simulation steps until Webots is stopping the controller
 while robot.step(timestep) != -1:
