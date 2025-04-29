@@ -3,7 +3,7 @@
 # You may need to import some classes of the controller module. Ex:
 #  from controller import Robot, Motor, DistanceSensor
 from controller import Robot
-from controller import VacuumGripper
+# from controller import VacuumGripper
 
 # create the Robot instance.
 robot = Robot()
@@ -24,7 +24,7 @@ m4 = robot.getDevice('joint_4')
 m5 = robot.getDevice('joint_5')
 m6 = robot.getDevice('joint_6')
 m7 = robot.getDevice('gripper::left')
-vgrip = robot.getDevice('gripper_vacuum')
+# vgrip = robot.getDevice('vacuum gripper')
 
 m1.setPosition(0)
 m2.setPosition(0)
@@ -33,7 +33,9 @@ m4.setPosition(0)
 m5.setPosition(0)
 m6.setPosition(0)
 m7.setPosition(0)
-vgrip.turnOff()
+# if vgrip.isOn():
+    # vgrip.turnOff()
+    # print("turnin off")
 
 m1.setVelocity(1)
 m2.setVelocity(1)
@@ -44,15 +46,21 @@ m6.setVelocity(1)
 m7.setVelocity(1)
 
 def pick_up_stir():
+    # vgrip.enablePresence(10000)
+    
     if robot.step(1500) == -1:
         return
     m1.setPosition(-0.75)
     m2.setPosition(0.8)
-    m7.setPosition(0.01)
-    if robot.step(1500) == -1:
+    m7.setPosition(0.01)   
+    if robot.step(500) == -1:
+        return
+    # vgrip.turnOn()    
+    if robot.step(1000) == -1:
         return
     
     m3.setPosition(0.487)
+    m5.setPosition(1)
     
     
     if robot.step(1500) == -1:
@@ -60,11 +68,26 @@ def pick_up_stir():
         
     # if possible, switch to vacuumGripper cause this is so much better probably
     m7.setPosition(-0.01)
-    vgrip.turnOn()    
     if robot.step(1500) == -1:
         return
+    # vgrip.enablePresence(timestep)
+    # while robot.step(timestep) != -1:
+        # if vgrip.isOn():
+            # print("still on")
+        # print(vgrip.getPresence())
+        # if vgrip.getPresence() == True:
+            # break
+        
+            
+        
+        # pass
+    
+    
+    # print(vgrip.getPresence())
         
     m2.setPosition(0)
+    # if vgrip.isOn():
+        # print("still on")
    
 pick_up_stir()
 # Main loop:

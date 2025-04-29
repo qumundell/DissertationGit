@@ -4,11 +4,10 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/project
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
 EXTERNPROTO "../protos/Cookware.proto"
-EXTERNPROTO "../protos/Ned.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/pal_robotics/tiago/protos/Tiago.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/solids/protos/SolidPipe.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/GalvanizedMetal.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/pal_robotics/tiago_extensions/protos/TiagoRightHey5.proto"
+EXTERNPROTO "../protos/TiagoGripper.proto"
 
 WorldInfo {
   contactProperties [
@@ -23,8 +22,8 @@ WorldInfo {
   ]
 }
 Viewpoint {
-  orientation 0.3525332022147725 0.18999652634655087 -0.916308715069568 2.224167506894249
-  position 2.523062966703635 0.9931010505894414 1.79934564761529
+  orientation 0.33200812762554444 0.12070050083935836 -0.9355223098824036 2.485916799631622
+  position 2.6257746564271747 0.9391200558192363 1.800165100996251
 }
 TexturedBackground {
 }
@@ -578,20 +577,17 @@ Solid {
   contactMaterial "table"
 }
 Cookware {
-  translation 2.46775 -0.104296 0.75
+  translation 2.11486 -0.607474 0.77
   name "pan"
 }
-Ned {
-  translation 2.02638 -0.156848 0.75
-  controller "ned_stir_pot"
-}
 Tiago {
-  translation 1.035 0.0968513 0.095
-  endEffectorSlot TiagoRightHey5 {
+  translation 1.2166915775256668 0.27994517010972186 0.08812008936110924
+  controller "tiago_stirring"
+  endEffectorSlot TiagoGripper {
   }
 }
 Solid {
-  translation 2.31509 0.148533 0.75
+  translation 2.39185 -0.00479832 0.75
   rotation 0 0 1 0.785398
   children [
     Shape {

@@ -4,8 +4,9 @@ simulationViewPerspectives: 000000ff00000001000000020000016a000003c5010000000201
 sceneTreePerspectives: 000000ff00000001000000030000001e000000c0000000fa0100000002010000000200
 maximizedDockId: -1
 centralWidgetVisible: 1
+renderingMode: PLAIN
 orthographicViewHeight: 1
-textFiles: 2 "worlds/Dissertation Simulation 1 attempt 2.wbt" "controllers/ned_stir_pot/ned_stir_pot.py" "protos/TiagoGripper.proto" "protos/Ned.proto"
+textFiles: 0 "worlds/Dissertation Simulation 1 attempt 2.wbt" "controllers/tiago_stirring/tiago_stirring.py" "protos/TiagoGripper.proto" "../../../../../../../Program Files/Webots/projects/robots/pal_robotics/tiago/controllers/tiago/tiago.c" "controllers/particle_spawner/particle_spawner.py"
 consoles: Console:All:All
 renderingDevicePerspectives: TIAGo:Astra depth;1;0.895833;0;0
 renderingDevicePerspectives: TIAGo:Astra rgb;1;0.895833;0;0
