@@ -7,8 +7,10 @@ export default function Sim2() {
         
         <div>
             <h1>World 2 Simulation</h1>
+            {/* webots --stream[=port[=1235]] C:\Users\quinl\OneDrive\Documents\University Work\DissertationGit\wbots\worlds\Dissertation Stirring Tiago Complete.wbt*/}
+
             <iframe
-                src="http://localhost:2000"
+                src="http://localhost:1235"
                 width="960"
                 height="540"
                 style={{ border: 'none' }}

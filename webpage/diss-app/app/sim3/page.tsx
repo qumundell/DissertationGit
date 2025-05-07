@@ -6,8 +6,10 @@ export default function Sim3() {
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
         <div>
             <h1>World 3 Simulation</h1>
+            {/* C:\Program Files\Webots\msys64\mingw64\bin\webotsw --stream[=port[=1236]] C:\Users\quinl\OneDrive\Documents\University Work\DissertationGit\wbots\worlds\Dissertation Stirring Tiago Complete.wbt*/}
+
             <iframe
-                src="http://localhost:2001"
+                src="http://localhost:1236"
                 width="960"
                 height="540"
                 style={{ border: 'none' }}
