@@ -6,14 +6,14 @@ export default function Sim3() {
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
         <div>
             <h1>World 3 Simulation</h1>
+            <h3>The Tiago robot stirring a pot.</h3>
             {/* C:\Program Files\Webots\msys64\mingw64\bin\webotsw --stream[=port[=1236]] C:\Users\quinl\OneDrive\Documents\University Work\DissertationGit\wbots\worlds\Dissertation Stirring Tiago Complete.wbt*/}
 
-            <iframe
-                src="http://localhost:1236"
-                width="960"
-                height="540"
-                style={{ border: 'none' }}
-            />
+            <video width="800" height="600" controls>
+                <source src="\videos\Dissertation Stirring Tiago Complete.mp4" type="video/mp4"/>
+
+                Your browser does not support the video tag.
+            </video>
         </div>
 
         </main>

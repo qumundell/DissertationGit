@@ -7,14 +7,12 @@ export default function Sim2() {
         
         <div>
             <h1>World 2 Simulation</h1>
-            {/* webots --stream[=port[=1235]] C:\Users\quinl\OneDrive\Documents\University Work\DissertationGit\wbots\worlds\Dissertation Stirring Tiago Complete.wbt*/}
+            <h3>Picking up large objects, the capabilities of robots.</h3>
+            <video width="800" height="600" controls>
+                <source src="\videos\vacuum_gripper.mp4" type="video/mp4"/>
 
-            <iframe
-                src="http://localhost:1235"
-                width="960"
-                height="540"
-                style={{ border: 'none' }}
-            />
+                Your browser does not support the video tag.
+            </video>
         </div>
 
         </main>
