@@ -13,19 +13,19 @@ export default function main() {
             <main className="flex flex-col row-start-2 items-center sm:items-start">
                 <div className="flex gap-8 justify-center sm:justify-start w-full">
                     <div className="flex-shrink-0">
-                        <Image src="/Dissertation_Pick_up_and_Place.jpg" alt="Missing files" width={400} height={300} />
+                        <Image src="/Dissertation_Pick_up_and_Place.jpg" alt="An image showing the thumbnail of the simulation" width={400} height={300} />
                         <Link href="/sim1" className="text-blue-500 hover:text-blue-700 font-medium text-xl">
                             Pick up and Place 
                         </Link>
                     </div>
                     <div className="flex-shrink-0">
-                        <Image src="/vacuum_gripper.jpg" alt="Missing files" width={400} height={300} />
+                        <Image src="/vacuum_gripper.jpg" alt="An image showing the thumbnail of the simulation" width={400} height={300} />
                         <Link href="/sim2" className="text-blue-500 hover:text-blue-700 font-medium text-xl">
                             Carrying large objects
                         </Link>
                     </div>
                     <div className="flex-shrink-0">
-                        <Image src="/Dissertation_Stirring_Tiago_Complete.jpg" alt="Missing files" width={400} height={300} />
+                        <Image src="/Dissertation_Stirring_Tiago_Complete.jpg" alt="An image showing the thumbnail of the simulation" width={400} height={300} />
                         <Link href="/sim3" className="text-blue-500 hover:text-blue-700 font-medium text-xl">
                             Stirring a Pot
                         </Link>

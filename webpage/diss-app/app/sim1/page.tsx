@@ -7,8 +7,8 @@ export default function Sim1() {
 
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
         <div>
-            <h1>The robot, Panda, displaying picking up and placing food items.</h1>
-            {/* webots --stream[=port[=1234]] C:\Users\quinl\OneDrive\Documents\University Work\DissertationGit\wbots\worlds\Dissertation Stirring Tiago Complete.wbt*/}
+            <h1>World 1 Simulation</h1>
+            <h2>The robot, Panda, displaying picking up and placing food items.</h2>
 
             <video width="800" height="600" controls>
                 <source src="\videos\Dissertation Pick up and Place.mp4" type="video/mp4"/>
