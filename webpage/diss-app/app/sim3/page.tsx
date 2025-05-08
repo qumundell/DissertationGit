@@ -6,7 +6,7 @@ export default function Sim3() {
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
         <div>
             <h1>World 3 Simulation</h1>
-            <h3>The Tiago robot stirring a pot.</h3>
+            <h2>The Tiago robot stirring a pot.</h2>
             {/* C:\Program Files\Webots\msys64\mingw64\bin\webotsw --stream[=port[=1236]] C:\Users\quinl\OneDrive\Documents\University Work\DissertationGit\wbots\worlds\Dissertation Stirring Tiago Complete.wbt*/}
 
             <video width="800" height="600" controls>

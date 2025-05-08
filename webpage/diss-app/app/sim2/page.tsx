@@ -7,7 +7,7 @@ export default function Sim2() {
         
         <div>
             <h1>World 2 Simulation</h1>
-            <h3>Picking up large objects, the capabilities of robots.</h3>
+            <h2>Picking up large objects, the capabilities of robots.</h2>
             <video width="800" height="600" controls>
                 <source src="\videos\vacuum_gripper.mp4" type="video/mp4"/>
 
