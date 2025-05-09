@@ -11,7 +11,7 @@ export default function main() {
             </h1>
 
             <main className="flex flex-col row-start-2 items-center sm:items-start">
-                <div className="flex gap-8 justify-center sm:justify-start w-full">
+                <div className="flex flex-col xl:flex-row gap-8 justify-center sm:justify-start w-full items-center xl:items-start">
                     <div className="flex-shrink-0">
                         <Image src="/Dissertation_Pick_up_and_Place.jpg" alt="An image showing the thumbnail of the simulation" width={400} height={300} />
                         <Link href="/sim1" className="text-blue-500 hover:text-blue-700 font-medium text-xl">
